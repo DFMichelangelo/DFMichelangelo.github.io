@@ -45,7 +45,6 @@
   85% {
     stroke-dasharray: 350px 0;
   }
-
   95%,
   to {
     stroke-dasharray: 0 350px;

@@ -14,7 +14,7 @@ const size = reactive(useWindowSize())
 
 const start = ref<Fn>(() => { })
 const MIN_BRANCH = 30
-const len = ref(6)
+const len = ref(9)
 const stopped = ref(false)
 
 function initCanvas(canvas: HTMLCanvasElement, width = 400, height = 400, _dpi?: number) {

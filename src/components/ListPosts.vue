@@ -24,6 +24,7 @@ const routes: Post[] = router.getRoutes()
     upcoming: i.meta.frontmatter.upcoming,
     redirect: i.meta.frontmatter.redirect,
     development: i.meta.frontmatter.development,
+    place: i.meta.frontmatter.place,
   }))
 
 const posts = computed(() =>
@@ -99,6 +100,9 @@ function getGroupName(p: Post) {
                 class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto md:hidden">ITA</span>
             </div>
           </li>
+          <div v-if="route.place" op50 text-sm hidden mt--2 md:block>
+            {{ route.place }}
+          </div>
         </component>
       </div>
     </template>

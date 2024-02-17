@@ -6,7 +6,7 @@ const { copy: _copy, copied } = useClipboard()
 const el = ref<HTMLElement | null>(null)
 
 function copy() {
-  _copy((el.value?.innerText || '').trim())
+  _copy((el.value?.textContent || '').trim())
 }
 </script>
 

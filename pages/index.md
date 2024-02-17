@@ -19,7 +19,7 @@ My area of expertise is eTrading with a particular ofcus on eFX and eRates: duri
 
 Outside of programming and finance, I enjoy going to the gym and cooking.
 
-***
+---
 
 Find me on
 

@@ -11,6 +11,7 @@ import Vue from '@vitejs/plugin-vue'
 import matter from 'gray-matter'
 import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
+import GitHubAlerts from 'markdown-it-github-alerts'
 import UnoCSS from 'unocss/vite'
 import SVG from 'vite-svg-loader'
 import { bundledLanguages, getHighlighter } from 'shikiji'
@@ -80,23 +81,20 @@ export default defineConfig({
         quotes: '""\'\'',
       },
       async markdownItSetup(md) {
-        const shiki = await getHighlighter({
-          themes: ['vitesse-dark', 'vitesse-light'],
-          langs: Object.keys(bundledLanguages) as any,
-        })
-
-        md.use((markdown) => {
-          markdown.options.highlight = (code, lang) => {
-            return shiki.codeToHtml(code, {
-              lang,
-              themes: {
-                light: 'vitesse-light',
-                dark: 'vitesse-dark',
-              },
-              cssVariablePrefix: '--s-',
-            })
-          }
-        })
+        md.use(await MarkdownItShiki({
+          themes: {
+            dark: 'vitesse-dark',
+            light: 'vitesse-light',
+          },
+          defaultColor: false,
+          cssVariablePrefix: '--s-',
+          transformers: [
+            transformerTwoslash({
+              explicitTrigger: true,
+              renderer: rendererRich(),
+            }),
+          ],
+        }))
 
         md.use(markdownFootnote);
 
@@ -122,6 +120,8 @@ export default defineConfig({
           containerHeaderHtml: '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
         })
         md.use(markdownKatex);
+
+        md.use(GitHubAlerts)
       },
       frontmatterPreprocess(frontmatter, options, id, defaults) {
         (() => {
@@ -142,6 +142,15 @@ export default defineConfig({
         return { head, frontmatter }
       },
     }),
+
+    AutoImport({
+      imports: [
+        'vue',
+        'vue-router',
+        '@vueuse/core',
+      ],
+    }),
+
     Components({
       extensions: ['vue', 'md'],
       dts: true,

@@ -1,7 +1,7 @@
 {
-  "private": true,
   "type": "module",
-  "packageManager": "pnpm@8.6.12",
+  "private": true,
+  "packageManager": "pnpm@8.15.1",
   "scripts": {
     "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && cp _dist_redirects dist/_redirects && cp 404.html dist/404.html",
     "dev": "vite --port 3333 --open",
@@ -21,8 +21,8 @@
     "floating-vue": "2.0.0-beta.24",
     "markdown-it-footnote": "^3.0.3",
     "nprogress": "^0.2.0",
-    "vue": "^3.3.4",
-    "vue-router": "4.2.4",
+    "vue": "^3.4.15",
+    "vue-router": "4.2.5",
     "vue-router-better-scroller": "^0.0.0"
   },
   "devDependencies": {
@@ -42,11 +42,12 @@
     "cross-env": "^7.0.3",
     "degit": "^2.8.4",
     "diacritics": "^1.3.0",
-    "eslint": "8.47.0",
-    "esno": "^0.17.0",
-    "fast-glob": "^3.3.1",
+    "eslint": "8.52.0",
+    "eslint-plugin-format": "^0.1.0",
+    "esno": "^4.0.0",
+    "fast-glob": "^3.3.2",
     "feed": "^4.2.2",
-    "fs-extra": "^11.1.1",
+    "fs-extra": "^11.2.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.7",
