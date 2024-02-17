@@ -14,13 +14,15 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import GitHubAlerts from 'markdown-it-github-alerts'
 import UnoCSS from 'unocss/vite'
 import SVG from 'vite-svg-loader'
-import { bundledLanguages, getHighlighter } from 'shikiji'
+import AutoImport from 'unplugin-auto-import/vite'
+import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
 import sharp from 'sharp'
 import { slugify } from './scripts/slugify'
 import markdownKatex from 'markdown-it-katex'
 import markdownFootnote from 'markdown-it-footnote'
+import MarkdownItShiki from '@shikijs/markdown-it'
 
 const promises: Promise<any>[] = []
 
