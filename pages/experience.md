@@ -45,7 +45,7 @@ projects:
       link: 'https://web.archive.org/web/20181222162454/http://cryptoforecast.com/'
       company: 'CryptoForecast'
       icon: 'i-material-symbols:currency-bitcoin-rounded'
-      roleLevel: 'Freelancer'
+      roleLevel: 'Junior Developer'
       timePeriod: 'Nov 17 - May 20'
   Education:
     - role: 'Summer School - Quantitative Finance'
