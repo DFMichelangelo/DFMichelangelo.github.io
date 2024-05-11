@@ -5,7 +5,7 @@ display: ''
 
 # Giving Talks
 
-My name is [Michelangelo De Francesco](/). I am a Quantitative Research Analyst living in London. I am focusing on many areas in electronic trading like Market Microstructure, Low Latency Development, Market Making, etc.
+My name is [Michelangelo De Francesco](/). I am a Quantitative Research Analyst living in London. I am focusing specific areas in electronic trading: Market Microstructure, Low Latency Development and Market Making.
 
 <!-- [Here are the talks I have given](/talks). -->
 
@@ -13,7 +13,7 @@ If you are organizing a trading/development related conference or meetup, I'd be
 
 - I am currently only available for both **in-person** and **online** talks.
 - I would expect my travel and accommodation to be covered.
-- I am holding an [Italian Passport](https://www.passportindex.org/passport/italy/). Which means for conferences outside of Schengen area (US, UK, etc.) I would need some assistance on the business visa application.
+- I am holding an [Italian Passport](https://www.passportindex.org/passport/italy/), Which means for conferences outside of Schengen area (US, UK, etc.) I would need some assistance on the business visa application.
 
 You can reach me out at [df.michelangelo@gmail.com](mailto:df.michelangelo@gmail.com).
 

@@ -97,9 +97,7 @@ export default defineConfig({
             }),
           ],
         }))
-
         md.use(markdownFootnote);
-
         md.use(anchor, {
           slugify,
           permalink: anchor.permalink.linkInsideHeader({

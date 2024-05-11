@@ -19,16 +19,13 @@ import { setupRouterScroller } from 'vue-router-better-scroller'
 import FloatingVue from 'floating-vue'
 import App from './App.vue'
 
-const routes = autoRoutes.map((i) => {
-
-  return {
+const routes = autoRoutes.map((i) =>({
     ...i,
     alias: i.path.endsWith('/')
       ? `${i.path}index.html`
       : `${i.path}.html`,
-
   }
-})
+))
 
 export const createApp = ViteSSG(
   App,
@@ -38,6 +35,7 @@ export const createApp = ViteSSG(
   ({ router, app, isClient }) => {
     dayjs.extend(LocalizedFormat)
 
+    
     app.use(FloatingVue)
 
     if (isClient) {

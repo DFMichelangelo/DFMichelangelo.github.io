@@ -44,6 +44,9 @@ const { y: scroll } = useWindowScroll()
         <RouterLink to="/chat" title="Let's Chat">
           <div i-ri-chat-1-line />
         </RouterLink>
+        <RouterLink to="/giving-talks" title="Giving Talks">
+          <div i-carbon:user-speaker />
+        </RouterLink>
         <a href="https://www.linkedin.com/in/dfmichelangelo/" target="_blank" title="Linkedin" class="lt-md:hidden">
           <div i-uil-linkedin-alt />
         </a>

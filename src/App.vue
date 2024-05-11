@@ -2,7 +2,6 @@
 import { useEventListener, onKeyStroke } from '@vueuse/core';
 import { ref } from 'vue';
 import { useRoute } from 'vue-router';
-
 const route = useRoute()
 
 const imageModel = ref<HTMLImageElement>()

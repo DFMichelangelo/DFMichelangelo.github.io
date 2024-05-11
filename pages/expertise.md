@@ -16,7 +16,7 @@ projects:
       icon: 'i-simple-icons:scala'
     - name: 'LMAX Disruptor'
       link: 'https://lmax-exchange.github.io/disruptor/'
-      desc: 'Best data structure for concurrency'
+      desc: 'One of the best data structure for concurrency'
       icon: "i-material-symbols:cycle"
     - name: 'Kafka'
       link: 'https://kafka.apache.org/'
@@ -32,7 +32,7 @@ projects:
       icon: "i-lucide:binary"
     - name: 'FIX'
       desc: 'Protocol for messages in the market'
-      icon: "i-lucide:binary"
+      icon: "i-fa6-solid:grip-lines-vertical"
   Low Latency Techniques:
     - name: 'Event Driven Development'
       desc: 'React to market changes'
@@ -75,6 +75,14 @@ projects:
       link: 'https://www.docker.com/'
       desc: 'Deploy in a deterministic way'
       icon: "i-mdi:docker"
+    - name: 'Terraform'
+      link: 'https://www.terraform.io/'
+      desc: 'Plug and play infrastructure'
+      icon: "i-mdi:terraform"
+    # - name: 'Traefik'
+    #   link: 'https://traefik.io/'
+    #   desc: 'Plug and play infrastructure'
+    #   icon: "i-mdi:traefik"
     - name: 'CI/CD & Pipelines'
       link: 'https://github.com/slidevjs/slidev'
       desc: 'Automated deploys and coverage analytics'
