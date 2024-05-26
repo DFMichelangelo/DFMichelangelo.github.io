@@ -23,6 +23,7 @@ import { slugify } from './scripts/slugify'
 import markdownKatex from 'markdown-it-katex'
 import markdownFootnote from 'markdown-it-footnote'
 import MarkdownItShiki from '@shikijs/markdown-it'
+import MarkdownItMagicLink from 'markdown-it-magic-link'
 
 const promises: Promise<any>[] = []
 
@@ -63,10 +64,11 @@ export default defineConfig({
           const { data } = matter(md)
           route.meta = Object.assign(route.meta || {}, { frontmatter: data })
         }
-
         return route
       },
     }),
+
+    
 
     Markdown({
       wrapperComponent: id => id.includes('/demo/')
@@ -120,7 +122,42 @@ export default defineConfig({
           containerHeaderHtml: '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
         })
         md.use(markdownKatex);
-
+        
+        md.use(MarkdownItMagicLink, {
+          linksMap: {
+            'Docker': 'https://docker.io/',
+            'Podman': 'https://podman.io/',
+            'OpenTofu': 'https://github.com/opentofu/opentofu',
+            'Gitea': 'https://github.com/go-gitea/gitea',
+            'Terraform': 'https://www.terraform.io/',
+            'QuestDB': 'https://github.com/questdb/questdb',
+            'Mend Renovate': 'https://github.com/renovatebot/renovate',
+            'GitLab': 'https://github.com/gitlabhq/gitlabhq',
+            'GitLab Runner': 'https://github.com/gitlabhq/gitlabhq',
+            'Git': {link:"https://git-scm.com/", imageUrl:"https://git-scm.com/images/logos/logomark-orange@2x.png"},
+            'Github': {link:"https://github.com/", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"},
+            'Traefik': {link:"https://traefik.io/traefik/", imageUrl:"https://djeqr6to3dedg.cloudfront.net/repo-logos/library/traefik/live/logo.png"},
+            'Portainer': {link:"https://www.portainer.io/", imageUrl:"https://www.gravatar.com/avatar/681edab450c1ebab7d83e7266b1d0fbb?s=120&r=g&d=404"},
+            'Portainer Agent': {link:"https://www.portainer.io/", imageUrl:"https://www.gravatar.com/avatar/681edab450c1ebab7d83e7266b1d0fbb?s=120&r=g&d=404"},            
+            'ClickHouse':{link:"https://clickhouse.com/", imageUrl:"https://avatars.githubusercontent.com/u/54801242?s=48&v=4"},
+            'Grafana': {link:"https://grafana.com/", imageUrl:"https://avatars.githubusercontent.com/u/7195757?s=48&v=4"},
+            'Postgres': {},
+            'SonarQube': {},
+            'Homer': {link:"https://github.com/bastienwirtz/homer", imageUrl:"https://raw.githubusercontent.com/bastienwirtz/homer/main/public/logo.png"},
+            'ElasticSearch': {},
+            'ElasticVue': {},
+            'Jaeger': {},
+            'Uptime Kuma': {},
+            'MongoDB': {},
+            'GrayLog': {},
+          },
+          imageOverrides: [
+            ['https://docker.io/', 'https://www.docker.com/wp-content/uploads/2024/01/icon-docker-square.svg'],
+            ['https://podman.io/', 'https://podman.io/logos/optimized/podman-3-logo-95w-90h.webp'],
+            ['https://www.terraform.io/', 'https://static-00.iconduck.com/assets.00/file-type-terraform-icon-455x512-csyun60o.png'],
+          ],
+        })
+        
         md.use(GitHubAlerts)
       },
       frontmatterPreprocess(frontmatter, options, id, defaults) {
@@ -161,6 +198,7 @@ export default defineConfig({
         }),
       ],
     }),
+
     Icons({
       defaultClass: 'inline',
       defaultStyle: 'vertical-align: sub;',
@@ -190,7 +228,6 @@ export default defineConfig({
 
   ssgOptions: {
     formatting: 'minify',
-    format: 'cjs',
   },
 })
 
