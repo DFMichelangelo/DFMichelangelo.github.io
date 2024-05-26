@@ -3,7 +3,7 @@ title: "One year managing my server: lessons learnt"
 date: 2024-06-12
 duration: 30min
 lang: en
-description: description
+description: How I set up my server 
 recording: false
 type: blog
 development: true

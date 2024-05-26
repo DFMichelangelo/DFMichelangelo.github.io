@@ -8,7 +8,12 @@
     {
       "pattern": "^/images",
       "replacement": "https://dfmichelangelo.github.io/images"
+    },
+    {
+      "pattern": "^/",
+      "replacement": "https://dfmichelangelo.github.io/"
     }
+    
   ],
   "aliveStatusCodes": [
     200,
