@@ -95,23 +95,30 @@ The structure of the repository is be very simple, containing only the configura
 From now on the pattern is easy: test the {Terraform} configuration in local and once happy, pull the repository in the server and run `terraform apply` to apply the changes.
 
 Different {Docker} container configurations are added to the `.tf` file to handle the different services hosted on the server:
-* {Traefik} asd
-* {GitLab}
-* {GitLab Runner}
-* {Portainer}
-* {Portainer Agent}
-* {ClickHouse}
-* {Grafana}
-* {Postgres}
-* {SonarQube}
-* {Homer}
+* {Traefik}, primarily used as reverse proxy on the rest of the services and for certificates provisioner. It leverages the {Docker} container architecture by auto discovering new docker containers when added to the {Terraform} configuration
+* {GitLab} which is used for multiple purposes:
+  1. Code Repository
+  1. CI/CD pipelines
+  1. Container \({Docker}\) Registry
+* {GitLab Runner} used to run  the CI/CD pipelines in {GitLab}
+* {Portainer} which serves as an interface for the {Docker} containers, giving the possibility to restart them, read logs or execute commands inside the container
+* {Portainer Agent} auto discovers {Docker} conatiners 
+* {ClickHouse} a solid columnar database to store big data and timeseries
+* {Grafana} a data visualization tool to plot the data in the databases
+* {Postgres} needed to store relational data with [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) characteristics (like user data).Any other relational database would be sufficient
+* {SonarQube} used for code quality purposes 
+* {Homer} serves as homepage and dashboard
+* {Jaeger} for application observability
+* {Uptime Kuma}
+* {GrayLog}
+* {MongoDB}
 * {ElasticSearch}
 * {ElasticVue}
-* {Jaeger}
-* {Uptime Kuma}
-* {MongoDB}
-* {GrayLog}
 
+Many of the services chosen are needed for software development, which is the primary objective of the server.
+
+At the end of the setup, this is somehow what you will see through the {Homer} homepage: 
+![Dashboard](/dashboard-server.png)
 ## Lesson learnt, again
 
 Set up each service took from 10 minutes (thanks to the classic copy-paste) to 2 hours each, depending on the degree of troubleshooting, the need to wire one service to another or try to find the right configuration.  
@@ -125,7 +132,7 @@ ClickHouse is unquestionably a powerful databse, yet, I find its configuration q
 Server setup is now complete: the services are living correctly and portainers allows to monitor them constantly. 
 
 Yet, DevOps is not completed yet: although the server is up and running there is the need to work on "code-related" topics.  
-CI/CD pipelines to check code quality with Sonarqube should be developed,set up {Mend Renovate} on {GitLab} as well as create the grafana dashboards to monitor our systems (or use some of the pre-made [Grafana Dashboards](https://grafana.com/grafana/dashboards/)). 
+CI/CD pipelines to check code quality with Sonarqube should be developed,set up {Mend Renovate} on {GitLab} as well as create the {Grafana} dashboards to monitor our systems (or use some of the pre-made [Grafana Dashboards](https://grafana.com/grafana/dashboards/)). 
 
 [^1]: Or {Podman}
 [^2]: Also known as: _the Server is Lava_ 🌋
