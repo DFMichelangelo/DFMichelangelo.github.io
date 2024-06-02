@@ -4,8 +4,9 @@
       "pattern": "^#"
     },
     {
-      "pattern": "^+39"
+      "pattern": "^tel:"
     }
+    
   ],
   "replacementPatterns": [
     {
