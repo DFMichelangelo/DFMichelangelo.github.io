@@ -105,7 +105,7 @@ Different {Docker} container configurations are added to the `.tf` file to handl
 * {Portainer Agent} auto discovers {Docker} conatiners 
 * {ClickHouse} a solid columnar database to store big data and timeseries
 * {Grafana} a data visualization tool to plot the data in the databases
-* {Postgres} needed to store relational data with [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) characteristics (like user data).Any other relational database would be sufficient
+* {Postgres} needed to store relational data with [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) characteristics (like user data). Any other relational database would be sufficient.
 * {SonarQube} used for code quality purposes 
 * {Homer} serves as homepage and dashboard
 * {Jaeger} for application observability
