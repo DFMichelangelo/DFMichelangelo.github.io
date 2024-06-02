@@ -28,11 +28,11 @@ Outside of programming and finance, I enjoy going to the gym and cooking.
         <a href="https://github.com/dfmichelangelo" target="_blank"><span op75 i-simple-icons-github /> GitHub</a>
       </p>
     </div>
-    <div id="contacts" >
+    <div id="contacts">
       <div flex="~ justify-end">Contacts</div>
         <p flex="~ gap-3 wrap justify-end" class="mt--1!">
           <a href="mailto:df.michelangelo@gmail.com" target="_blank"><span op75 i-simple-icons-gmail /> Email</a>
-          <a href="+39 3316496194" target="_blank"><span op75 i-material-symbols:call /> Phone</a>
+          <a href="tel:+393316496194" target="_blank"><span op75 i-material-symbols:call /> Phone</a>
         </p>
     </div>
   </div>
