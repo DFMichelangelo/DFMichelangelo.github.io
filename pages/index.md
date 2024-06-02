@@ -20,19 +20,26 @@ My area of expertise is eTrading with a particular focus on eFX and eRates: duri
 Outside of programming and finance, I enjoy going to the gym and cooking.
 
 ---
-  <div flex="~ justify-between  ">
+  <div flex="~ justify-between">
     <div>
       <div>Find me on</div>
-      <p flex="~ gap-3 wrap" class="mt--1!">
+      <p flex="~ gap-3 wrap" class="mt--0!">
         <a href="https://www.linkedin.com/in/dfmichelangelo/" target="_blank"><span op75 i-simple-icons-linkedin /> Linkedin</a>
         <a href="https://github.com/dfmichelangelo" target="_blank"><span op75 i-simple-icons-github /> GitHub</a>
       </p>
     </div>
     <div id="contacts">
       <div flex="~ justify-end">Contacts</div>
-        <p flex="~ gap-3 wrap justify-end" class="mt--1!">
-          <a href="mailto:df.michelangelo@gmail.com" target="_blank"><span op75 i-simple-icons-gmail /> Email</a>
+        <p flex="~ gap-3 wrap justify-end" class="mt--0!">
+        <VTooltip>
+          <a href="mailto:df.michelangelo@gmail.com" target="_blank"><span op75 i-simple-icons-gmail /> Email
+          </a>
+          <template #popper>df.michelangelo@gmail.com</template>
+        </VTooltip>
+        <VTooltip>
           <a href="tel:+393316496194" target="_blank"><span op75 i-material-symbols:call /> Phone</a>
+          <template #popper>+39 3316496194</template>
+        </VTooltip>
         </p>
     </div>
   </div>
