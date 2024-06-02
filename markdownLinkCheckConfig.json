@@ -2,6 +2,9 @@
   "ignorePatterns": [
     {
       "pattern": "^#"
+    },
+    {
+      "pattern": "^+39"
     }
   ],
   "replacementPatterns": [
