@@ -16,7 +16,9 @@ Working at [<span i-mdi:bank-outline/> Sumitomo Mitsui Banking Corporation](http
 
 My area of expertise is eTrading with a particular focus on eFX and eRates: during my career I had the opportunity to work on pricing engines and auto-hedging systems of various financial instruments for EMEA and US markets for market making purposes.
 
-Outside of programming and finance, I enjoy going to the gym and cooking.
+> We affirm that the magnificence of the world has been enriched with a new beauty: the beauty of speed  
+>
+> -<cite>The Futurist Manifesto, Filippo Tommaso Marinetti</cite>
 
 ---
   <div flex="~ justify-between">
