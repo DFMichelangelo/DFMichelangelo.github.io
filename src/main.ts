@@ -18,7 +18,7 @@ import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
 import { setupRouterScroller } from 'vue-router-better-scroller'
 import FloatingVue from 'floating-vue'
 import App from './App.vue'
-import { createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = autoRoutes.map((i) =>({
     ...i,
@@ -32,17 +32,23 @@ export const createApp = ViteSSG(
   App,
   {
     routes,
-    history: createWebHashHistory()
   },
   ({ router, app, isClient }) => {
     dayjs.extend(LocalizedFormat)
-
-    
     app.use(FloatingVue)
 
     if (isClient) {
       const html = document.querySelector('html')!
-      setupRouterScroller(router, {
+      const router1 = createRouter({
+        history: createWebHistory(), routes,
+      })
+      app.use(router1)
+      Object.values(import.meta.glob<{ install: any }>('./modules/*.ts', { eager: true })).map(i => i.install?.({
+        app, router, routes,
+      }))
+    
+      app.mount('#app')
+      setupRouterScroller(router1, {
         selectors: {
           html(ctx) {
             // only do the sliding transition when the scroll position is not 0
@@ -65,3 +71,4 @@ export const createApp = ViteSSG(
     }
   },
 )
+
