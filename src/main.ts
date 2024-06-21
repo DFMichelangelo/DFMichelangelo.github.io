@@ -18,6 +18,7 @@ import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
 import { setupRouterScroller } from 'vue-router-better-scroller'
 import FloatingVue from 'floating-vue'
 import App from './App.vue'
+import { createWebHashHistory } from 'vue-router'
 
 const routes = autoRoutes.map((i) =>({
     ...i,
@@ -31,6 +32,7 @@ export const createApp = ViteSSG(
   App,
   {
     routes,
+    history: createWebHashHistory()
   },
   ({ router, app, isClient }) => {
     dayjs.extend(LocalizedFormat)
