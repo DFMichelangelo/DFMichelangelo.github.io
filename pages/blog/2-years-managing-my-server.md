@@ -1,5 +1,5 @@
 ---
-title: "One year managing my server: lessons learnt"
+title: "Two years managing my server: lessons learnt"
 date: 2024-06-12
 duration: 30min
 lang: en
@@ -109,15 +109,15 @@ Different {Docker} container configurations are added to the `.tf` file to handl
 * {SonarQube} used for code quality purposes 
 * {Homer} serves as homepage and dashboard
 * {Jaeger} for application observability
-* {Uptime Kuma}
-* {GrayLog}
-* {MongoDB}
-* {ElasticSearch}
-* {ElasticVue}
+* {Uptime Kuma} for uptime monitoring of the applications we are going to develop
+* {GrayLog} to easily query logs of our applications
+* {MongoDB} as support database required by one-or-many of the abovementioned services
+* {ElasticSearch} again, as support database required by one-or-many of the abovementioned services
+* {ElasticVue} as helper GUI to interact with {ElasticSearch}
 
 Many of the services chosen are needed for software development, which is the primary objective of the server.
 
-At the end of the setup, this is somehow what you will see through the {Homer} homepage: 
+At the end of the setup and after watching this [YouTube video](https://www.youtube.com/watch?v=KO9oMXkz0QA) for making our dashboard aesthetic, this is somehow what you will see through the {Homer} homepage
 ![Dashboard](/dashboard-server.png)
 ## Lesson learnt, again
 
@@ -126,6 +126,18 @@ Setting up the [Gitlab Container Registry](https://docs.gitlab.com/ee/user/packa
 
 If I would have to change something of the current setup would be ClickHouse in favour of {QuestDB}. 
 ClickHouse is unquestionably a powerful databse, yet, I find its configuration quite difficult to use and its query explorer (called [ClickHouse PlayGround](https://play.clickhouse.com/play?user=play)) very limited compared to the one of {QuestDB} (check out the [Demo](https://demo.questdb.io/)).
+
+## Was it worth it?
+
+Serveral hours has been spent on server set up and a simple question may arise: was it worth it?
+To answer this question, I gave myself few months of test to understand the shortcomings of my decisions. 
+
+So far, the only relevant disadvantage I foresee is the big time and knowledge overhead that it takes just to start the set up of the first services, making this set up only relevant if someoene wants an enterpise-like level infrastructuve rather than just a simple homelab.
+
+On the other hand, maintenance of this infrastructuve is fairly inexistent, as highlighted before.
+As proof, when {GitLab} published v17.1.1 and announced the urgency to update it as soon as possible, it just took 2 minutes to change the version of GitLab in the `.tf` and run `terraform apply`. That's it, problem solved, no pain. 
+![GitLab security Release](/gitlab_security_release.png)
+
 ## More to go
 
 

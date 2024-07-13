@@ -50,20 +50,20 @@ projects:
       desc: 'Flexibility from backend to frontend'
       icon: "i-mdi:language-javascript"
     - name: 'Typescript'
-      link: 'https://github.com/slidevjs/slidev'
+      #link: 'https://github.com/slidevjs/slidev'
       desc: 'Ensure type safety in Javascript'
       icon: "i-mdi:language-typescript"
   Databases:
     - name: 'SQL'
-      link: 'https://github.com/slidevjs/slidev'
+      #link: 'https://github.com/slidevjs/slidev'
       desc: 'Extract value from data'
       icon: "i-ph:file-sql"
     - name: 'MySQL'
-      link: 'https://github.com/slidevjs/slidev'
+      link: 'https://www.mysql.com/'
       desc: 'Classical relational database'
       icon: "i-tabler:brand-mysql"
     - name: 'PostgreSQL'
-      link: 'https://github.com/slidevjs/slidev'
+      link: 'https://www.postgresql.org/'
       desc: 'More than just a relational database'
       icon: "i-akar-icons:postgresql-fill"
     - name: 'Clickhouse'
@@ -84,12 +84,12 @@ projects:
     #   desc: 'Plug and play infrastructure'
     #   icon: "i-mdi:traefik"
     - name: 'CI/CD & Pipelines'
-      link: 'https://github.com/slidevjs/slidev'
+     # link: 'https://github.com/slidevjs/slidev'
       desc: 'Automated deploys and coverage analytics'
       icon: "i-eos-icons:pipeline"
   Tools:
     - name: 'Grafana'
-      link: 'https://github.com/slidevjs/slidev'
+      link: 'https://grafana.com/'
       desc: 'Platform monitoring and data analytics'
       icon: "i-simple-icons:grafana"
 
