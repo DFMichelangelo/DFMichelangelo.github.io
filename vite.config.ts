@@ -168,7 +168,7 @@ export default defineConfig({
               ? fs.copy(`${id.slice(0, -3)}.png`, `public/${path}`)
               : generateOg(frontmatter.title!.replace(/\s-\s.*$/, '').trim(), `public/${path}`),
           )
-          frontmatter.image = `https://dfmichelangelo.github.io/${path}`
+          frontmatter.image = `https://m.defrancesco.ovh/${path}`
         })()
         const head = defaults(frontmatter, options)
         return { head, frontmatter }
