@@ -5,6 +5,9 @@
     },
     {
       "pattern": "^tel:"
+    },
+    {
+      "pattern": " https://traefik.io/"
     }
     
   ],
