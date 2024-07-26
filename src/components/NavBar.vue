@@ -24,18 +24,17 @@ const { y: scroll } = useWindowScroll()
       </RouterLink>
       <div class="spacer" />
       <div class="right" print:op0>
-        <RouterLink to="/blog" title="Blog">
-          <span class="lt-md:hidden">Blog</span>
-          <div i-ri-article-line md:hidden />
-        </RouterLink>
         <RouterLink to="/expertise" title="Expertise">
           <span class="lt-md:hidden">Expertise</span>
           <div i-ri-lightbulb-line class="md:hidden" />
         </RouterLink>
-
         <RouterLink to="/experience" title="Experience">
           <span class="lt-md:hidden">Experience</span>
           <div i-material-symbols:work-outline class="md:hidden" />
+        </RouterLink>
+        <RouterLink to="/blog" title="Blog">
+          <span class="lt-md:hidden">Blog</span>
+          <div i-ri-article-line md:hidden />
         </RouterLink>
         <!-- <RouterLink to="/demos" title="Demos">
           <span class="lt-md:hidden">Demos</span>
