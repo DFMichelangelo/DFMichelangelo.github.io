@@ -144,6 +144,9 @@ As proof, when {GitLab} published v17.1.1 and announced the urgency to update it
 Server setup is now complete: the services are living correctly and portainers allows to monitor them constantly. 
 
 Yet, DevOps is not completed yet: although the server is up and running there is the need to work on "code-related" topics.  
+
+First of all, agreed on the principle related to not interact directly with the server, but rather using a _medium_ to make changes on it: we _moved fast and <s>broke</s> created things by running `terraform apply` every time we wanted to enhance the homelab, which is great. Nonetheless, applying a CI/CD pipeline for promoting {Terraform} states to production is necessary to avoid any unexpected result. [Terraform best practices](https://developer.hashicorp.com/terraform/cloud-docs/recommended-practices) include the use of a pipeline and the use of a terraform state manager to ensure that changes applied to the server are consistent. [Gitlab Terraform State Manager](https://docs.gitlab.com/ee/user/infrastructure/iac/) is what we should look for. 
+
 CI/CD pipelines to check code quality with Sonarqube should be developed,set up {Mend Renovate} on {GitLab} as well as create the {Grafana} dashboards to monitor our systems (or use some of the pre-made [Grafana Dashboards](https://grafana.com/grafana/dashboards/)). 
 
 [^1]: Or {Podman}
