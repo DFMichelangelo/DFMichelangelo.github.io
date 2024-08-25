@@ -150,6 +150,7 @@ export default defineConfig({
             'Uptime Kuma': {link:"https://github.com/louislam/uptime-kuma", imageUrl:"https://raw.githubusercontent.com/louislam/uptime-kuma/11007823e7207531da4d82cab0b774ee8ace6f57/public/icon.svg"},
             'MongoDB': {link:"https://www.mongodb.com/",imageUrl:"https://www.svgrepo.com/show/331488/mongodb.svg"},
             'GrayLog': {link:"https://graylog.org/", imageUrl:"https://static.cdnlogo.com/logos/g/32/graylog.svg"},
+            'Quarkus': {link:"https://quarkus.io/", imageUrl:"https://quarkus.io/assets/images/brand/quarkus_icon_default.svg"},
           },
         })
         

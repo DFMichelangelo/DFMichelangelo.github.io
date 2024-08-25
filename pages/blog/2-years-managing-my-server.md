@@ -119,6 +119,14 @@ Many of the services chosen are needed for software development, which is the pr
 
 At the end of the setup and after watching this [YouTube video](https://www.youtube.com/watch?v=KO9oMXkz0QA) for making our dashboard aesthetic, this is somehow what you will see through the {Homer} homepage
 ![Dashboard](/dashboard-server.png)
+
+
+## Practicality and long-term vision uber alles
+
+The solid priciples previously highlighted state that we should use external services at the best of their capabilities. Quants and software engineers with a deep knowledge of the product lineup of {Grafana} may note that {Jager} has been chosen over [Grafana Tempo](https://grafana.com/oss/tempo/) and {Graylog} over [Grafana Loki](https://grafana.com/oss/loki/).
+Even though I consider them products that provide different services compared to Grafana (the visual UI tool), I find important to consider the tech-stack that is going to be used and seek for synergies between technologies. 
+{Quarkus} is a technology I am going to use and it actually has great synergies with {Jager} and {Graylog}, choosing them over the alternatives.
+
 ## Lesson learnt, again
 
 Set up each service took from 10 minutes (thanks to the classic copy-paste) to 2 hours each, depending on the degree of troubleshooting, the need to wire one service to another or try to find the right configuration.  
