@@ -24,7 +24,7 @@ import markdownKatex from 'markdown-it-katex'
 import markdownFootnote from 'markdown-it-footnote'
 import MarkdownItShiki from '@shikijs/markdown-it'
 import MarkdownItMagicLink from 'markdown-it-magic-link'
-
+import {transformerNotationDiff} from '@shikijs/transformers'
 const promises: Promise<any>[] = []
 
 export default defineConfig({
@@ -87,12 +87,13 @@ export default defineConfig({
       async markdownItSetup(md) {
         md.use(await MarkdownItShiki({
           themes: {
-            dark: 'vitesse-dark',
-            light: 'vitesse-light',
+            dark: 'one-dark-pro',
+            light: 'catppuccin-latte',
           },
           defaultColor: false,
           cssVariablePrefix: '--s-',
           transformers: [
+            transformerNotationDiff({}),
             transformerTwoslash({
               explicitTrigger: true,
               renderer: rendererRich(),
