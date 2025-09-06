@@ -8,6 +8,9 @@
     },
     {
       "pattern": " https://traefik.io/"
+    },
+    {
+      "pattern": "https://www.mysql.com/"
     }
     
   ],
