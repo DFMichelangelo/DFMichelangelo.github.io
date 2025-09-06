@@ -78,7 +78,11 @@ projects:
     - name: 'Terraform'
       link: 'https://www.terraform.io/'
       desc: 'Plug and play infrastructure'
-      icon: "i-mdi:terraform"
+      icon: "i-simple-icons:terraform"
+    - name: 'Ansible'
+      link: 'https://docs.ansible.com/'
+      desc: 'Flexible automation'
+      icon: "i-simple-icons:ansible"
     # - name: 'Traefik'
     #   link: 'https://traefik.io/'
     #   desc: 'Plug and play infrastructure'
@@ -92,6 +96,10 @@ projects:
       link: 'https://grafana.com/'
       desc: 'Platform monitoring and data analytics'
       icon: "i-simple-icons:grafana"
+    - name: 'Prometheus'
+      link: 'https://prometheus.io/'
+      desc: 'Realtime metrics'
+      icon: "i-simple-icons:prometheus"
 
 
 ---

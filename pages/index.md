@@ -10,11 +10,11 @@ const isBasePath= window.location.pathname === "/"
 </script>
 
 <div v-if="isBasePath">
-I am Michelangelo De Francesco, eRates Quantitative Research Analyst.
+I am Michelangelo De Francesco, eRates Quant.
 
 Working at [<span i-mdi:bank-outline/> Sumitomo Mitsui Banking Corporation](https://www.smbcgroup.com/) in London.<br>
 
-My area of expertise is electronic trading with a particular focus on eFX and eRates: during my career I had the opportunity to work on pricing engines and auto-hedging systems of various financial instruments for EMEA and US markets for market making purposes.
+My area of expertise is electronic trading with a particular focus on eFX and eRates: during my career I had the opportunity to work on pricing engines and auto-hedging systems of various financial instruments for EMEA and US markets for market making and alpha generation purposes.
 
 > We affirm that the magnificence of the world has been enriched with a new beauty: the beauty of speed  
 >
