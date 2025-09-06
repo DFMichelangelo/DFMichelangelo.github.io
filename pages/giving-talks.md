@@ -12,7 +12,7 @@ My name is [Michelangelo De Francesco](/). I am a Quantitative Research Analyst 
 If you are organizing a trading/development related conference or meetup, I'd be happy to give a talk.
 
 - I am currently only available for both **in-person** and **online** talks.
-- I am holding an [Italian Passport](https://www.passportindex.org/passport/italy/), which means for conferences outside of Schengen area I would need some assistance on the business visa application.
+- I am holding an Italian Passport, which means for conferences outside of Schengen area I would need some assistance on the business visa application.
 
 You can reach me out at [df.michelangelo@gmail.com](mailto:df.michelangelo@gmail.com).
 

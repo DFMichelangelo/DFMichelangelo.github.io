@@ -28,7 +28,7 @@ projects:
       location: 'Munich, Germany'
       icon: 'i-streamline:money-cash-bag-dollar-bag-payment-cash-money-finance'
     - role: 'Research Assistant'
-      link: 'https://www.unive.it/pag/35192'
+      link: 'https://www.unive.it/web/en/8375/vera-academy'
       company: "Ca' Foscari University of Venice"
       roleLevel: 'Intern'
       timePeriod: 'Lug 21 - Oct 21'
