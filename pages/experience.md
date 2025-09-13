@@ -6,14 +6,14 @@ plum: true
 wrapperClass: 'text-center'
 projects:
   Work Experience:
-    - role: 'eRates Quantitative Research Analyst'
+    - role: 'eRates Quant'
       link: 'https://www.smbcnikko.co.jp/en/index.html'
       company: 'Sumitomo Mitsui Banking Corporation'
       roleLevel: 'AVP'
       icon: 'i-material-symbols:ssid-chart'
       timePeriod: 'Sept 2023 - Present'
       location: 'London, UK'
-    - role: 'eFX Quantitative Developer'
+    - role: 'eFX Quant'
       link: 'https://www.unicredit.it/'
       timePeriod: 'Jun 22 - Aug 23'
       location: 'Milan, Italy'
